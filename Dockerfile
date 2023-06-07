@@ -24,7 +24,9 @@ RUN set -ex; \
     mkdir /app; \
     mkdir -p /var/spool/cron/crontabs; \
     touch /var/log/oci.log; \
+    touch /var/log/cron.log; \
     chmod 777 /var/log/oci.log; \
+    chmod 777 /var/log/cron.log; \
     echo '* * * * * /usr/bin/php /app/index.php >> /var/log/oci.log' > /var/spool/cron/crontabs/ociarmhost
     
 # Copy local files
