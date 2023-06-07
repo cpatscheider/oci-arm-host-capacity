@@ -19,7 +19,7 @@ RUN set -ex; \
         supervisor \
     ; \
     rm -rf /var/lib/apt/lists/*; \
-    curl -sk https://getcomposer.org/installer -o composer-setup.php; \
+    curl -sS https://getcomposer.org/installer -o composer-setup.php; \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
     mkdir /app; \
     mkdir -p /var/spool/cron/crontabs; \
