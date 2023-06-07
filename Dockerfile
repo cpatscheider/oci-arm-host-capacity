@@ -15,7 +15,7 @@ RUN set -ex; \
     rm -rf /var/lib/apt/lists/* \
     mkdir /app
     
-COPY ./* /app
+COPY ./* /app/
 
 WORKDIR /app
 
