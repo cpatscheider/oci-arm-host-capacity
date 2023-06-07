@@ -17,9 +17,9 @@ RUN set -ex; \
         curl \
         busybox-static \
         supervisor \
-        python-pip  \
-        python-setuptools \
-        python-wheel \
+        python3-pip  \
+        python3-setuptools \
+        python3-wheel \
     ; \
     rm -rf /var/lib/apt/lists/*; \
     curl -sS https://getcomposer.org/installer -o composer-setup.php; \
