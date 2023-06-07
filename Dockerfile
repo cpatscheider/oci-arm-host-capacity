@@ -27,7 +27,7 @@ RUN set -ex; \
     touch /var/log/cron.log; \
     chmod 777 /var/log/oci.log; \
     chmod 777 /var/log/cron.log; \
-    echo '* * * * * /usr/bin/php /app/index.php >> /var/log/oci.log' > /var/spool/cron/crontabs/ociarmhost
+    echo '* * * * * /usr/bin/php /app/index.php >> /var/log/oci.log' > /var/spool/cron/crontabs/root
     
 # Copy local files
 COPY cron.sh /
