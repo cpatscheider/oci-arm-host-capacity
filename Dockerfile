@@ -23,7 +23,7 @@ RUN set -ex; \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
     mkdir /app; \
     mkdir -p /var/spool/cron/crontabs; \
-    echo '* * * * * /usr/bin/php /app/index.php > /dev/stdout 2>&1' > /var/spool/cron/crontabs/ociarmhost
+    echo '* * * * * /usr/bin/php /app/index.php > /proc/1/fd/1 2>&1' > /var/spool/cron/crontabs/ociarmhost
     
 # Copy local files
 COPY cron.sh /
