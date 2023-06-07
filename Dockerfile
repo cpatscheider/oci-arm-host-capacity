@@ -7,6 +7,8 @@ RUN set -ex; \
         php \
         php-common \
         php-cli \
+        php-curl \
+        php-dom \
         curl \
         php-mbstring \
         git \
