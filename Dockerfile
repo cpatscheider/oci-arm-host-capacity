@@ -10,10 +10,11 @@ RUN set -ex; \
         curl \
         php-mbstring \
         git \
-        unzip  \
+        unzip \ 
+        curl \
     ; \
     rm -rf /var/lib/apt/lists/*; \
-    curl -s https://getcomposer.org/installer -o composer-setup.php; \
+    curl -sS https://getcomposer.org/installer -o composer-setup.php; \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
     mkdir /app
     
