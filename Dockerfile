@@ -22,5 +22,6 @@ COPY ./* /app/
 
 WORKDIR /app
 ENV COMPOSER_ALLOW_SUPERUSER=1
-RUN composer install
+RUN composer update; \
+    composer install
    
