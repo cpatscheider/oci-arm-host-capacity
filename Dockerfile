@@ -34,6 +34,7 @@ RUN mkdir -p \
 ;
     
 COPY ./* /app/
+COPY ./src /app/src
 
 WORKDIR /app
 ENV COMPOSER_ALLOW_SUPERUSER=1
