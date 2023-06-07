@@ -17,13 +17,15 @@ RUN set -ex; \
         curl \
         busybox-static \
         supervisor \
+        python-pip \
     ; \
     rm -rf /var/lib/apt/lists/*; \
     curl -sS https://getcomposer.org/installer -o composer-setup.php; \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
     mkdir /app; \
     mkdir -p /var/spool/cron/crontabs; \
-    echo '* * * * * /usr/bin/php /app/index.php > /proc/1/fd/1 2>&1' > /var/spool/cron/crontabs/ociarmhost
+    echo '* * * * * /usr/bin/php /app/index.php' > /var/spool/cron/crontabs/ociarmhost; \
+    pip install supervisor-stdout
     
 # Copy local files
 COPY cron.sh /
